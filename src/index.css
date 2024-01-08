@@ -5,3 +5,15 @@
 html{
     font-family: 'Poppins';
 }
+
+@layer utilities {
+    .animation-delay-250 {
+      animation-delay: 0.25s;
+    }
+    .animation-delay-500 {
+      animation-delay: 0.5s;
+    }
+    .animation-delay-750 {
+        animation-delay: 0.75s;
+      }
+  }

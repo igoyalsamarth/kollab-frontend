@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 
 export default function InfluencerTile(props:any){
+
+  const convertToKorM = (num:number) => {
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(1) + 'M';
+    } else if (num >= 1000) {
+        return (num / 1000).toFixed(1) + 'K';
+    } else {
+        return num;
+    }
+}
+
     return(
         <div className="flex flex-col items-center p-5 gap-3 rounded-[20px] bg-[#FCD8DE] border border-[#F7A3B1] shadow-[4px_4px_0px_0px_#E0446F] ">
           <div className="flex w-[113px] aspect-square rounded-full bg-white">
@@ -21,7 +32,7 @@ export default function InfluencerTile(props:any){
               <p className="text-[#767676] text-sm">posts</p>
             </div>
             <div className="flex flex-col items-center">
-              <p className=" font-semibold text-lg leading-none">{props.followers}</p>
+              <p className=" font-semibold text-lg leading-none">{convertToKorM(props.followers)}</p>
               <p className="text-[#767676] text-sm">followers</p>
             </div>
           </div>
