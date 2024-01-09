@@ -11,7 +11,6 @@ export default function InfluencerTile(props:any){
         return num;
     }
 }
-
     return(
         <div className="flex flex-col items-center p-5 gap-3 rounded-[20px] bg-[#FCD8DE] border border-[#F7A3B1] shadow-[4px_4px_0px_0px_#E0446F] ">
           <div className="flex w-[113px] aspect-square rounded-full bg-white">
@@ -45,7 +44,7 @@ export default function InfluencerTile(props:any){
           </div>
           {props.emailId ? <p className="text-[#767676] text-sm">{props.emailId}</p> :
           <p className="text-[#767676] text-sm">No email found</p>}
-          <Link to={props.accountName} className="font-moderno rounded-full text-white border border-[#550A1F] shadow-[4px_4px_0px_0px_#550A1F] bg-[#E0446F] px-[20px] py-[10px]">Open Profile</Link>
+          <Link to={props.instaAccount} className="font-moderno rounded-full text-white border border-[#550A1F] shadow-[4px_4px_0px_0px_#550A1F] bg-[#E0446F] px-[20px] py-[10px]">Open Profile</Link>
         </div>
     );
 }

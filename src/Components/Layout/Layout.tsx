@@ -12,6 +12,7 @@ export default function Layout() {
                     <Route path='' element={<Home />} />
                     <Route path='search' element={<ListOfInfluencers />} />
                     <Route path='loading' element={<LoadingPageAnimation />} />
+                    <Route path='setup' element={<LoadingPageAnimation />} />
                 </Routes>
             </div>
         </div>
