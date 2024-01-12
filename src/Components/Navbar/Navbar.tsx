@@ -1,4 +1,3 @@
-import { UserButton } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -7,7 +6,6 @@ export default function Navbar() {
             <Link to='/'>
                 <p className='font-moderno text-4xl'><span className='text-[#E0446F]'>k</span><span className='text-[#12A1CC]'>o</span><span className='text-[#E0446F]'>l</span><span className='text-[#12A1CC]'>l</span><span className='text-[#E0446F]'>a</span><span className='text-[#12A1CC]'>b</span></p>
             </Link>
-            <UserButton />
             <Link to='search'>Search</Link>
             <Link to='loading'>Loading</Link>
             <div className='flex items-center gap-7'>
