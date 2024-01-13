@@ -42,7 +42,7 @@ export default function ProfileModal(props: any) {
                             <p className="text-[#767676] text-sm">collaborations</p>
                         </div>
                     </div>
-                    <div className="flex flex-col border-t border-[#D0D9F1] px-[20px] gap-[15px]">
+                    <div className="flex flex-col border-t border-[#D0D9F1] px-[20px] gap-[20px]">
                         <div className="flex gap-[30px] -mt-[5px]">
                             <div className="flex flex-col gap-2">
                                 <div className="flex h-[10px] rounded-full w-full bg-[#2E3854]"></div>
@@ -86,6 +86,44 @@ export default function ProfileModal(props: any) {
                             <button className=" font-moderno px-5 py-[10px] rounded-full border border-[#D0D9F1] bg-[#FFFDFD] shadow-[0px_4px_6px_0px_rgba(208,217,241,0.7)]">
                                     {'Likes > 10K'}
                             </button>
+                        </div>
+                        <div className="flex flex-wrap gap-[10px]">
+                            <div className="flex w-[140px] h-[237px] bg-gray-500 p-[10px] rounded-[10px] shadow-[0px_4px_14px_0px_#E5ECFF] items-end">
+                                <div className="flex flex-col gap-[3px]">
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">9.9M</p>
+                                    </div>
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">682k</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex w-[140px] h-[237px] bg-gray-500 p-[10px] rounded-[10px] shadow-[0px_4px_14px_0px_#E5ECFF] items-end">
+                                <div className="flex flex-col gap-[3px]">
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">9.9M</p>
+                                    </div>
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">682k</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex w-[140px] h-[237px] bg-gray-500 p-[10px] rounded-[10px] shadow-[0px_4px_14px_0px_#E5ECFF] items-end">
+                                <div className="flex flex-col gap-[3px]">
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">9.9M</p>
+                                    </div>
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">682k</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
