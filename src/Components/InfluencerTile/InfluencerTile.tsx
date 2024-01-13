@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import ProfileModal from "../ProfileModal/ProfileModal";
 
 export default function InfluencerTile(props: any) {
+const [profileModal, setProfileModal] = useState(false)
 
 const convertToKorM = (num: number) => {
   if (num >= 1000000000) {
@@ -14,10 +16,11 @@ const convertToKorM = (num: number) => {
   }
 }
   return (
+    <>
     <div className="flex flex-col items-center -space-y-[5px] w-full">
-      <div className="z-[100] flex bg-slate-500 aspect-square w-[104px] border-[10px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2]">
+      <div className="z-[50] flex bg-slate-500 aspect-square w-[104px] border-[10px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2]">
       </div>
-      <div className="z-[99] w-full gap-4 flex flex-col border-[10px] border-white rounded-[10px] shadow-[0px_4px_34px_0px_#D6DFF2] p-5 items-center bg-gradient-to-b from-[#F2F6FE] to-[#f2f6fe00]">
+      <div className="z-[49] w-full gap-4 flex flex-col border-[10px] border-white rounded-[10px] shadow-[0px_4px_34px_0px_#D6DFF2] p-5 items-center bg-gradient-to-b from-[#F2F6FE] to-[#f2f6fe00]">
         <div className="flex flex-col items-center">
           <p className="text-lg text-center line-clamp-1">{props.accountName}</p>
           <p className="text-sm">@{props.instaAccount}</p>
@@ -45,10 +48,14 @@ const convertToKorM = (num: number) => {
           </div>
           <p className="text-[#767676] text-sm">Engagment rate</p>
         </div>
-        <Link to={props.instaAccount} className="px-5 py-[10px] border border-[#D0D9F1] rounded-[10px] font-moderno">
+        <button onClick={() => setProfileModal(true)} className="px-5 py-[10px] border border-[#D0D9F1] rounded-[10px] font-moderno">
           View Details
-        </Link>
+        </button>
       </div>
     </div>
+    {
+      profileModal && <ProfileModal setProfileModal={setProfileModal} accountName={props.accountName} />
+    }
+    </>
   );
 }

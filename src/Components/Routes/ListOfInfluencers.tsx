@@ -19,15 +19,15 @@ export default function ListOfInfluencers() {
     }
     getUsers();
   }, []);
+  
   return (
     <div className="flex w-[1440px] flex-col items-center">
       <div className="flex">
-
       </div>
       {data ? <div className="grid grid-cols-4 gap-[60px] w-[1140px]">
-        {data && data.map((Item: any) => { return (<InfluencerTile key={Item.id} instaAccount={Item.instaAccount} accountName={Item.accountName} followers={Item.followers} posts={Item.posts} links={Item.link.length} emailId = {Item.emailId} />) })}
-      </div> 
-      : <LoadingPageAnimation />}
+        {data && data.map((Item: any) => { return (<InfluencerTile key={Item.id} instaAccount={Item.instaAccount} accountName={Item.accountName} followers={Item.followers} posts={Item.posts} links={Item.link.length} emailId={Item.emailId} />) })}
+      </div>
+        : <LoadingPageAnimation />}
     </div>
   )
 }
