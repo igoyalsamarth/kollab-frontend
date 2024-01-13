@@ -1,7 +1,7 @@
 export default function ProfileModal(props: any) {
     return (
         <div className="flex fixed top-0 w-full h-full bg-black/60 z-[100] left-0 items-center justify-center">
-            <div className="flex flex-col gap-[20px] w-[657px]">
+            <div className="flex flex-col gap-[20px] w-[687px]">
                 <div className="flex justify-end">
                     <button onClick={()=>props.setProfileModal(false)} className="rounded-full w-12 aspect-square bg-white font-semibold rotate-45 text-[43px] leading-none text-black/60 font-moderno">+</button>
                 </div>
@@ -88,6 +88,18 @@ export default function ProfileModal(props: any) {
                             </button>
                         </div>
                         <div className="flex flex-wrap gap-[10px]">
+                            <div className="flex w-[140px] h-[237px] bg-gray-500 p-[10px] rounded-[10px] shadow-[0px_4px_14px_0px_#E5ECFF] items-end">
+                                <div className="flex flex-col gap-[3px]">
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">9.9M</p>
+                                    </div>
+                                    <div className="flex gap-[2px] items-center">
+                                        <p>icon</p>
+                                        <p className="text-sm text-white">682k</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="flex w-[140px] h-[237px] bg-gray-500 p-[10px] rounded-[10px] shadow-[0px_4px_14px_0px_#E5ECFF] items-end">
                                 <div className="flex flex-col gap-[3px]">
                                     <div className="flex gap-[2px] items-center">
