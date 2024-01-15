@@ -15,10 +15,27 @@ const convertToKorM = (num: number) => {
     return num;
   }
 }
+
+const getBase64Image = (bufferData: any) => {
+  const buffer = new Uint8Array(bufferData.data);
+  let binary = '';
+  for (let byte of buffer) {
+    binary += String.fromCharCode(byte);
+  }
+  const base64 = window.btoa(binary);
+  return `data:image/jpeg;base64,${base64}`;
+};
+
+const imageUrl = getBase64Image(props.imgSource);
+
+console.log(imageUrl)
+
+
+console.log(props.imgSource)
   return (
     <>
     <div className="flex flex-col items-center -space-y-[5px] w-full">
-      <div className="z-[50] flex bg-slate-500 aspect-square w-[104px] border-[10px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2]">
+      <div className={`z-[50] flex aspect-square w-[104px] border-[10px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2] bg-cover`} style={{backgroundImage: `url(${getBase64Image(props.imgSource)})`}}>
       </div>
       <div className="z-[49] w-full gap-4 flex flex-col border-[10px] border-white rounded-[10px] shadow-[0px_4px_34px_0px_#D6DFF2] p-5 items-center bg-gradient-to-b from-[#F2F6FE] to-[#f2f6fe00]">
         <div className="flex flex-col items-center">
