@@ -33,7 +33,7 @@ export default function ProfileModal(props: any) {
                         <div className="flex flex-col gap-[10px] w-full">
                             <div className="flex flex-col">
                                 <p className=" text-[28px] leading-normal">{basicDetails?.user.accountName}</p>
-                                <p className=" text-sm underline decoration-dashed underline-offset-[6px] decoration-[#2E3854]">{basicDetails?.user.instaAccount}</p>
+                                <p className=" text-sm underline decoration-dashed underline-offset-[6px] decoration-[#2E3854]">@{basicDetails?.user.instaAccount}</p>
                             </div>
                             <div className="flex gap-[5px]">
                                 <p className="px-[10px] pt-[3px] pb-[2px] rounded-full border border-[#D0D9F1] text-[11px] uppercase tracking-wider text-[#77777F]">COMEDY</p>

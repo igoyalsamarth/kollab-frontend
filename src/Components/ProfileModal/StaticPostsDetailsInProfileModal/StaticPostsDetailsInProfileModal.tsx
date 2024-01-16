@@ -19,14 +19,12 @@ export default function StaticPostsInProfileModal(props: any) {
         getReelsDetails()
     }, [props.instaAccount]);
 
-    console.log(reelDetails)
-
     return (
         <>
             <div className="flex gap-[30px]">
                 <div className="flex flex-col">
                     <p className="text-[20px] leading-none font-semibold">{convertToKorM(reelDetails?.likes)}</p>
-                    <p className="text-[#767676] text-sm">avg. reel likes</p>
+                    <p className="text-[#767676] text-sm">avg. static posts likes</p>
                 </div>
             </div>
             <div className="flex gap-[15px]">

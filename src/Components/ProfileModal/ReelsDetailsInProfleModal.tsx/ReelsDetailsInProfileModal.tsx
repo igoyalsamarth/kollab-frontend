@@ -52,7 +52,7 @@ export default function ReelsDetailsInProfileModal(props: any) {
                 </button>
             </div>
             <div className="flex flex-wrap gap-[10px]">
-                {reelDetails?.data.map((Item: any) => <div className="flex w-[140px] h-[237px] bg-gray-500 rounded-[10px] shadow-[0px_4px_14px_0px_#E5ECFF] items-end bg-cover" style={{ backgroundImage: `url(${getBase64Image(Item.imgSource)})` }}>
+                {reelDetails?.data.map((Item: any) => <div className="flex overflow-clip w-[140px] h-[237px] bg-gray-500 rounded-[10px] shadow-[0px_4px_14px_0px_#E5ECFF] items-end bg-cover" style={{ backgroundImage: `url(${getBase64Image(Item.imgSource)})` }}>
                     <div className="flex flex-col gap-[1px] bg-gradient-to-t from-black w-full p-[10px]">
                         <div className="flex gap-[2px] items-center leading-none">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
