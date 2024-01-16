@@ -1,38 +1,11 @@
 import { useState } from "react";
 import ProfileModal from "../ProfileModal/ProfileModal";
+import { convertToKorM, getBase64Image } from "../../util/generalFunctions";
 
 export default function InfluencerTile(props: any) {
 const [profileModal, setProfileModal] = useState(false)
 
-const convertToKorM = (num: number) => {
-  if (num >= 1000000000) {
-    return (num / 1000000000).toFixed(1) + 'B';
-  } else if (num >= 1000000) {
-    return (num / 1000000).toFixed(1) + 'M';
-  } else if (num >= 1000) {
-    return (num / 1000).toFixed(1) + 'K';
-  } else {
-    return num;
-  }
-}
-
-const getBase64Image = (bufferData: any) => {
-  const buffer = new Uint8Array(bufferData.data);
-  let binary = '';
-  for (let byte of buffer) {
-    binary += String.fromCharCode(byte);
-  }
-  const base64 = window.btoa(binary);
-  return `data:image/jpeg;base64,${base64}`;
-};
-
-const imageUrl = getBase64Image(props.imgSource);
-
-console.log(imageUrl)
-
-
-console.log(props.imgSource)
-  return (
+return (
     <>
     <div className="flex flex-col items-center -space-y-[5px] w-full">
       <div className={`z-[50] flex aspect-square w-[104px] border-[10px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2] bg-cover`} style={{backgroundImage: `url(${getBase64Image(props.imgSource)})`}}>
@@ -71,7 +44,7 @@ console.log(props.imgSource)
       </div>
     </div>
     {
-      profileModal && <ProfileModal setProfileModal={setProfileModal} accountName={props.accountName} />
+      profileModal && <ProfileModal setProfileModal={setProfileModal} instaAccount={props.instaAccount} />
     }
     </>
   );

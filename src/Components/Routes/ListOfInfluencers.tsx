@@ -11,9 +11,7 @@ export default function ListOfInfluencers() {
   const getUsers = async () => {
     try {
       const res = await axios.get(`${serverEndpoint}/query/get_professionals`);
-      console.log(res);
       setData(res.data.data);
-      return res.data.data;
     } catch (err) {
       console.log(err);
     }
