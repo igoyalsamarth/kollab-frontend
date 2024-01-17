@@ -17,3 +17,24 @@ html{
         animation-delay: 0.75s;
       }
   }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #B8C5E2;
+    border-radius: 10px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(48, 48, 48);
+}

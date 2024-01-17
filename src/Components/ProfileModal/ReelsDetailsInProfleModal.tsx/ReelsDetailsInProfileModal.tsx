@@ -19,8 +19,6 @@ export default function ReelsDetailsInProfileModal(props: any) {
         getReelsDetails()
     }, [props.instaAccount]);
 
-    console.log(reelDetails)
-
     return (
         <>
             <div className="flex gap-[30px]">

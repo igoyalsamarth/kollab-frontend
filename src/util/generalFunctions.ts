@@ -1,4 +1,5 @@
-export const convertToKorM = (num: number) => {
+export const convertToKorM = (num: number | undefined) => {
+  if (num !== undefined && typeof num === 'number') {
     if (num >= 1000000000) {
       return (num / 1000000000).toFixed(1) + 'B';
     } else if (num >= 1000000) {
@@ -6,11 +7,15 @@ export const convertToKorM = (num: number) => {
     } else if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'K';
     } else {
-      return num;
+      return parseFloat(num.toFixed(1));
     }
+  } else {
+    return 0;
   }
-  
+}
+
 export const getBase64Image = (bufferData: any) => {
+  if (bufferData !== null && bufferData.data !== undefined) {
     const buffer = new Uint8Array(bufferData.data);
     let binary = '';
     for (let byte of buffer) {
@@ -18,4 +23,9 @@ export const getBase64Image = (bufferData: any) => {
     }
     const base64 = window.btoa(binary);
     return `data:image/jpeg;base64,${base64}`;
-  };
+  } else {
+    // handle error or return a default value
+    console.error('bufferData is null or does not have a data property');
+    return ''; // or whatever default value makes sense in your case
+  }
+};
