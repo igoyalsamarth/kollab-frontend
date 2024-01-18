@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: theme => ({
+        'gradient-radial': 'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.39) 0%, #4C74DA 100%)'
+      }),
       fontFamily: {
         moderno: ['MuseoModerno', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif']
