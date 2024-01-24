@@ -8,19 +8,17 @@ const [profileModal, setProfileModal] = useState(false)
 return (
     <>
     <div className="flex flex-col items-center -space-y-[5px] w-full">
-      <div className={`z-[50] flex aspect-square w-[104px] border-[10px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2] bg-cover`} style={{backgroundImage: `url(${getBase64Image(props.imgSource)})`}}>
+      <div className={`z-[50] flex aspect-square w-[104px] border-[5px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2] bg-cover`} style={{backgroundImage: `url(${getBase64Image(props.imgSource)})`}}>
       </div>
-      <div className="z-[49] w-full gap-4 flex flex-col border-[10px] border-white rounded-[10px] shadow-[0px_4px_34px_0px_#D6DFF2] p-5 items-center bg-gradient-to-b from-[#F2F6FE] to-[#f2f6fe00]">
+      <div className="z-[49] w-full gap-4 flex flex-col border-[5px] overflow-clip border-white rounded-[10px] shadow-[0px_4px_34px_0px_#D6DFF2] p-5 items-center bg-gradient-to-b from-[#F2F6FE] to-[#f2f6fe00]">
         <div className="flex flex-col items-center">
           <p className="text-lg text-center line-clamp-1">{props.accountName}</p>
           <p className="text-sm">@{props.instaAccount}</p>
         </div>
         <div className="flex gap-[5px]">
-          <p className="text-[11px] tracking-wide uppercase text-[#77777F] border border-[#D0D9F1] rounded-full px-[10px] pt-[3px] pb-[2px]">COMEDY</p>
-          <p className="text-[11px] tracking-wide uppercase text-[#77777F] border border-[#D0D9F1] rounded-full px-[10px] pt-[3px] pb-[2px]">FITTNESS</p>
+          <p className="text-[11px] tracking-wide uppercase text-[#77777F] border border-[#D0D9F1] rounded-full px-[10px] pt-[3px] pb-[2px]">{props.category ?? 'Influencer'}</p>
         </div>
-        <br className="bg-black h-[1px]" />
-        <div className="flex gap-10">
+        <div className="flex gap-10 border-t border-black">
           <div className="flex flex-col items-center">
             <p className="text-lg font-semibold uppercase leading-none">{props.posts}</p>
             <p className="text-[#767676] text-sm">posts</p>

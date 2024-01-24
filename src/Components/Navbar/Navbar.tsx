@@ -7,8 +7,7 @@ export default function Navbar() {
                 <p className='font-moderno text-4xl text-[#1F1F1F] font-medium'>kollab</p>
             </Link>
             <Link to='search'>Search</Link>
-            <Link to='loading'>Loading</Link>
-            <div className='flex items-center gap-7 py-3'>
+            <div className='hidden items-center gap-7 py-3'>
                 <Link to='#' className='font-moderno text-xl text-black'>Login</Link>
                 <div className="relative">
                     <div className="bg-[#FDFFEB] -top-[50px] left-[50px] w-[36.467px] h-[122.556px] absolute rotate-[-36deg] blur-[34px]">
