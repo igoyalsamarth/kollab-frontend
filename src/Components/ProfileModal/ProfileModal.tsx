@@ -36,14 +36,13 @@ export default function ProfileModal(props: any) {
                                 <p className=" text-sm underline decoration-dashed underline-offset-[6px] decoration-[#2E3854]">@{basicDetails?.user.instaAccount}</p>
                             </div>
                             <div className="flex gap-[5px]">
-                                <p className="px-[10px] pt-[3px] pb-[2px] rounded-full border border-[#D0D9F1] text-[11px] uppercase tracking-wider text-[#77777F]">COMEDY</p>
-                                <p className="px-[10px] pt-[3px] pb-[2px] rounded-full border border-[#D0D9F1] text-[11px] uppercase tracking-wider text-[#77777F]">FITTNESS</p>
+                                <p className="px-[10px] pt-[3px] pb-[2px] rounded-full border border-[#D0D9F1] text-[11px] uppercase tracking-wider text-[#77777F]">{basicDetails?.user.category ?? 'Influencer'}</p>
                             </div>
                             <div className="text-[#767676] text-xs">
                                 {basicDetails?.user.description}
                             </div>
                         </div>
-                        {basicDetails && <div className="flex w-[179px] aspect-square border-[10px] border-white rounded-full shadow-[0px_6.885px_58.519px_0px_#D6DFF2] bg-cover" style={{ backgroundImage: `url(${getBase64Image(basicDetails.user.imgSource)})` }}>
+                        {basicDetails && <div className="flex w-[179px] aspect-square border-[5px] border-white rounded-full shadow-[0px_6.885px_58.519px_0px_#D6DFF2] bg-cover" style={{ backgroundImage: `url(${getBase64Image(basicDetails.user.imgSource)})` }}>
                         </div>}
                     </div>
                     <div className="flex gap-[50px] px-[20px]">

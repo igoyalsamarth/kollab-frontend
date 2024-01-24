@@ -1,5 +1,6 @@
 import instaLogo from '../../assets/insta.png'
 import union from '../../assets/union.svg'
+import { Link } from 'react-router-dom';
 export default function Home() {
     return (
         <div className="flex flex-col items-center w-full gap-[60px]">
@@ -41,7 +42,7 @@ export default function Home() {
             <div className='flex flex-col items-center gap-[30px] z-[100]'>
                 <p>Or select a listed category</p>
                 <div className='flex flex-wrap gap-[15px]'>
-                    <button className='text-[#2B3031] rounded-full font-moderno pr-5 pl-[10px] py-[10px] flex gap-1 items-center justify-center border border-[#D0D9F1] shadow-[0px_4px_6px_0px_rgba(208,217,241,0.70)] bg-gradient-to-r from-[#ECDBFF] from-[-9.53%] via-[#FEFFE5] via-48.3% to-[#EAFAF3] to-107.31%'>
+                    <Link to='/search/fitness' className='text-[#2B3031] rounded-full font-moderno pr-5 pl-[10px] py-[10px] flex gap-1 items-center justify-center border border-[#D0D9F1] shadow-[0px_4px_6px_0px_rgba(208,217,241,0.70)] bg-gradient-to-r from-[#ECDBFF] from-[-9.53%] via-[#FEFFE5] via-48.3% to-[#EAFAF3] to-107.31%'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.85018 1.40726C8.10612 1.06142 8.59397 0.988537 8.93981 1.24448L14.7844 5.56975C15.1302 5.8257 15.2031 6.31354 14.9472 6.65938C14.6912 7.00522 14.2034 7.0781 13.8575 6.82216L8.01296 2.49689C7.66712 2.24094 7.59424 1.7531 7.85018 1.40726ZM5.52864 11.9657C5.1828 11.7097 5.10992 11.2219 5.36586 10.876L9.38219 5.44895C9.63813 5.1031 10.126 5.03022 10.4718 5.28616C10.8177 5.5421 10.8905 6.02995 10.6346 6.37579L6.61827 11.8029C6.36233 12.1487 5.87449 12.2216 5.52864 11.9657ZM7.06069 16.007C7.40653 16.263 7.89437 16.1901 8.15031 15.8442C8.40625 15.4984 8.33337 15.0106 7.98753 14.7546L2.14296 10.4293C1.79712 10.1734 1.30928 10.2463 1.05334 10.5921C0.797398 10.938 0.870277 11.4258 1.21612 11.6817L7.06069 16.007ZM10.4929 0.455666C10.7488 0.109822 11.2366 0.0369436 11.5825 0.292885L14.9222 2.76447C15.2681 3.02041 15.341 3.50825 15.085 3.8541C14.8291 4.19994 14.3412 4.27282 13.9954 4.01688L10.6556 1.54529C10.3098 1.28935 10.2369 0.801507 10.4929 0.455666ZM4.41802 16.9586C4.76386 17.2146 5.2517 17.1417 5.50764 16.7958C5.76358 16.45 5.6907 15.9621 5.34486 15.7062L2.00511 13.2346C1.65927 12.9787 1.17142 13.0516 0.915483 13.3974C0.659542 13.7432 0.732422 14.2311 1.07826 14.487L4.41802 16.9586Z" fill="url(#paint0_radial_160_2238)" />
                             <defs>
@@ -52,8 +53,8 @@ export default function Home() {
                             </defs>
                         </svg>
                         <p>Fitness</p>
-                    </button>
-                    <button className='text-[#2B3031] rounded-full font-moderno pr-5 pl-[10px] py-[10px] flex gap-1 items-center justify-center border border-[#D0D9F1] shadow-[0px_4px_6px_0px_rgba(208,217,241,0.70)] bg-gradient-to-r from-[#ECDBFF] from-[-9.53%] via-[#FEFFE5] via-48.3% to-[#EAFAF3] to-107.31%'>
+                    </Link>
+                    <Link to='/artist/entrepreneur' className='text-[#2B3031] rounded-full font-moderno pr-5 pl-[10px] py-[10px] flex gap-1 items-center justify-center border border-[#D0D9F1] shadow-[0px_4px_6px_0px_rgba(208,217,241,0.70)] bg-gradient-to-r from-[#ECDBFF] from-[-9.53%] via-[#FEFFE5] via-48.3% to-[#EAFAF3] to-107.31%'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.85018 1.40726C8.10612 1.06142 8.59397 0.988537 8.93981 1.24448L14.7844 5.56975C15.1302 5.8257 15.2031 6.31354 14.9472 6.65938C14.6912 7.00522 14.2034 7.0781 13.8575 6.82216L8.01296 2.49689C7.66712 2.24094 7.59424 1.7531 7.85018 1.40726ZM5.52864 11.9657C5.1828 11.7097 5.10992 11.2219 5.36586 10.876L9.38219 5.44895C9.63813 5.1031 10.126 5.03022 10.4718 5.28616C10.8177 5.5421 10.8905 6.02995 10.6346 6.37579L6.61827 11.8029C6.36233 12.1487 5.87449 12.2216 5.52864 11.9657ZM7.06069 16.007C7.40653 16.263 7.89437 16.1901 8.15031 15.8442C8.40625 15.4984 8.33337 15.0106 7.98753 14.7546L2.14296 10.4293C1.79712 10.1734 1.30928 10.2463 1.05334 10.5921C0.797398 10.938 0.870277 11.4258 1.21612 11.6817L7.06069 16.007ZM10.4929 0.455666C10.7488 0.109822 11.2366 0.0369436 11.5825 0.292885L14.9222 2.76447C15.2681 3.02041 15.341 3.50825 15.085 3.8541C14.8291 4.19994 14.3412 4.27282 13.9954 4.01688L10.6556 1.54529C10.3098 1.28935 10.2369 0.801507 10.4929 0.455666ZM4.41802 16.9586C4.76386 17.2146 5.2517 17.1417 5.50764 16.7958C5.76358 16.45 5.6907 15.9621 5.34486 15.7062L2.00511 13.2346C1.65927 12.9787 1.17142 13.0516 0.915483 13.3974C0.659542 13.7432 0.732422 14.2311 1.07826 14.487L4.41802 16.9586Z" fill="url(#paint0_radial_160_2238)" />
                             <defs>
@@ -64,8 +65,8 @@ export default function Home() {
                             </defs>
                         </svg>
                         <p>Entrepreneure</p>
-                    </button>
-                    <button className='text-[#2B3031] rounded-full font-moderno pr-5 pl-[10px] py-[10px] flex gap-1 items-center justify-center border border-[#D0D9F1] shadow-[0px_4px_6px_0px_rgba(208,217,241,0.70)] bg-gradient-to-r from-[#ECDBFF] from-[-9.53%] via-[#FEFFE5] via-48.3% to-[#EAFAF3] to-107.31%'>
+                    </Link>
+                    <Link to='/search/artist' className='text-[#2B3031] rounded-full font-moderno pr-5 pl-[10px] py-[10px] flex gap-1 items-center justify-center border border-[#D0D9F1] shadow-[0px_4px_6px_0px_rgba(208,217,241,0.70)] bg-gradient-to-r from-[#ECDBFF] from-[-9.53%] via-[#FEFFE5] via-48.3% to-[#EAFAF3] to-107.31%'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.85018 1.40726C8.10612 1.06142 8.59397 0.988537 8.93981 1.24448L14.7844 5.56975C15.1302 5.8257 15.2031 6.31354 14.9472 6.65938C14.6912 7.00522 14.2034 7.0781 13.8575 6.82216L8.01296 2.49689C7.66712 2.24094 7.59424 1.7531 7.85018 1.40726ZM5.52864 11.9657C5.1828 11.7097 5.10992 11.2219 5.36586 10.876L9.38219 5.44895C9.63813 5.1031 10.126 5.03022 10.4718 5.28616C10.8177 5.5421 10.8905 6.02995 10.6346 6.37579L6.61827 11.8029C6.36233 12.1487 5.87449 12.2216 5.52864 11.9657ZM7.06069 16.007C7.40653 16.263 7.89437 16.1901 8.15031 15.8442C8.40625 15.4984 8.33337 15.0106 7.98753 14.7546L2.14296 10.4293C1.79712 10.1734 1.30928 10.2463 1.05334 10.5921C0.797398 10.938 0.870277 11.4258 1.21612 11.6817L7.06069 16.007ZM10.4929 0.455666C10.7488 0.109822 11.2366 0.0369436 11.5825 0.292885L14.9222 2.76447C15.2681 3.02041 15.341 3.50825 15.085 3.8541C14.8291 4.19994 14.3412 4.27282 13.9954 4.01688L10.6556 1.54529C10.3098 1.28935 10.2369 0.801507 10.4929 0.455666ZM4.41802 16.9586C4.76386 17.2146 5.2517 17.1417 5.50764 16.7958C5.76358 16.45 5.6907 15.9621 5.34486 15.7062L2.00511 13.2346C1.65927 12.9787 1.17142 13.0516 0.915483 13.3974C0.659542 13.7432 0.732422 14.2311 1.07826 14.487L4.41802 16.9586Z" fill="url(#paint0_radial_160_2238)" />
                             <defs>
@@ -76,7 +77,7 @@ export default function Home() {
                             </defs>
                         </svg>
                         <p>Artist</p>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

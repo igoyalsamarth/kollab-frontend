@@ -25,7 +25,7 @@ console.log(data)
     <div className="flex w-[1440px] flex-col items-center">
       <div className="flex">
       </div>
-      {data ? <div className="grid grid-cols-4 gap-[60px] w-[1140px]">
+      {data ? <div className="grid grid-cols-4 gap-[60px] w-[1140px] py-10">
         {data && data.map((Item: any) => { return (<InfluencerTile key={Item.id} instaAccount={Item.instaAccount} accountName={Item.accountName} followers={Item.followers} posts={Item.posts} links={Item.link.length} emailId={Item.emailId} imgSource={Item.imgSource} category={Item.category} />) })}
       </div>
         : <LoadingPageAnimation />}

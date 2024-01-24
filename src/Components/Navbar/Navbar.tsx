@@ -2,11 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
-        <div className='flex justify-between py-5 relative'>
+        <div className='flex justify-between py-5 relative w-full'>
             <Link to='/'>
                 <p className='font-moderno text-4xl text-[#1F1F1F] font-medium'>kollab</p>
             </Link>
-            <Link to='search'>Search</Link>
             <div className='hidden items-center gap-7 py-3'>
                 <Link to='#' className='font-moderno text-xl text-black'>Login</Link>
                 <div className="relative">
