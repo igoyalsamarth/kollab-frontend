@@ -5,24 +5,209 @@ import { Fragment, useState } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 
 const people = [
-    { id: 1, name: 'Wade Cooper' },
-    { id: 2, name: 'Arlene Mccoy' },
-    { id: 3, name: 'Devon Webb' },
-    { id: 4, name: 'Tom Cook' },
-    { id: 5, name: 'Tanya Fox' },
-    { id: 6, name: 'Hellen Schmidt' },
+    "Influencer",
+    "Advertising/Marketing",
+    "Album",
+    "Amateur Sports Team",
+    "Apartment & Condo Building",
+    "Appliance Repair Service",
+    "App Page",
+    "Architectural Designer",
+    "Art",
+    "Artist",
+    "Arts & Entertainment",
+    "Athlete",
+    "Automotive Repair Shop",
+    "Baby & Children’s Clothing Store",
+    "Baby Goods/Kids Goods",
+    "Bar",
+    "Beauty, Cosmetic & Personal Care",
+    "Beauty Salon",
+    "Book",
+    "Business Center",
+    "Business Service",
+    "Camera/Photo",
+    "Canoe & Kayak Rental",
+    "Chicken Joint",
+    "Church of Christ",
+    "Church of Jesus Christ of Latter-day Saints",
+    "Clothing (Brand)",
+    "Clothing Store",
+    "College & University",
+    "Commercial & Industrial",
+    "Commercial & Industrial Equipment Supplier",
+    "Commercial Bank",
+    "Commercial Equipment",
+    "Commercial Real Estate Agency",
+    "Commercial Truck Dealership",
+    "Community",
+    "Community Organization",
+    "Consulting Agency",
+    "Contractor",
+    "Convenience Store",
+    "Credit Union",
+    "Doctor",
+    "Deli",
+    "Dancer",
+    "Design & Fashion",
+    "Dessert Shop",
+    "Discount Store",
+    "Dorm",
+    "E-Cigarette Store",
+    "E-commerce Website",
+    "Education",
+    "Engineering Service",
+    "Entertainment Website",
+    "Entrepreneur",
+    "Episode",
+    "Event",
+    "Family Style Restaurant",
+    "Fashion Designer",
+    "Fashion Model",
+    "Fast Food Restaurant",
+    "Financial Service",
+    "Food & Beverage",
+    "Food Stand",
+    "Footwear Store",
+    "Gamer",
+    "Games/Toys",
+    "Gaming Video Creator",
+    "Government Organization",
+    "Graphic Designer",
+    "Grocery Store",
+    "Hardware Store",
+    "Health/Beauty",
+    "Heating, Ventilating & Air Conditioning Service",
+    "Home Decor",
+    "Home Improvement",
+    "Hospital",
+    "Hotel",
+    "Hotel & Lodging",
+    "Ice Cream Shop",
+    "In-Home Service",
+    "Industrial Company",
+    "Information Technology Company",
+    "Insurance Company",
+    "Interior Design Studio",
+    "Internet Company",
+    "Internet Marketing Service",
+    "Japanese Restaurant",
+    "Jazz & Blues Club",
+    "Jewelry/Watches",
+    "Jewelry & Watches Company",
+    "Journalist",
+    "Just For Fun",
+    "Karaoke",
+    "Kennel",
+    "Kitchen & Bath Contractor",
+    "Kitchen/Cooking",
+    "Korean Restaurant",
+    "Landmark & Historical Place",
+    "Lawyer & Law Firm",
+    "Library",
+    "Loan Service",
+    "Local Service",
+    "Lumber Yard",
+    "Marketing Agency",
+    "Media",
+    "Media/News Company",
+    "Medical Center",
+    "Medical School",
+    "Men’s Clothing Store",
+    "Mental Health Service",
+    "Movie",
+    "Musician/Band",
+    "Music Lessons & Instruction School",
+    "Music Video",
+    "News & Media Website",
+    "Newspaper",
+    "Nonprofit Organization",
+    "Non-Governmental Organization (NGO)",
+    "Not a Business",
+    "Nursing Agency",
+    "Obstetrician-Gynecologist (OBGYN)",
+    "Office Equipment Store",
+    "Office Supplies",
+    "Optician",
+    "Optometrist",
+    "Outdoor & Sporting Goods Company",
+    "Personal Blog",
+    "Petting Zoo",
+    "Photographer",
+    "Product/Service",
+    "Public & Government Service",
+    "Public Figure",
+    "Public Utility Company",
+    "Quay",
+    "Real Estate",
+    "Real Estate Agent",
+    "Real Estate Appraiser",
+    "Real Estate Company",
+    "Real Estate Developer",
+    "Record Label",
+    "Religious Center",
+    "Religious Organization",
+    "Residence",
+    "Restaurant",
+    "Retail Bank",
+    "School",
+    "Science, Technology & Engineering",
+    "Shopping & Retail",
+    "Shopping District",
+    "Shopping Mall",
+    "Smoothie & Juice Bar",
+    "Song",
+    "Specialty School",
+    "Sports & Recreation",
+    "Sports League",
+    "Sports Team",
+    "Teens & Kids Website",
+    "Telemarketing Service",
+    "Tire Dealer & Repair Shop",
+    "Trade School",
+    "Traffic School",
+    "Train Station",
+    "Tutor/Teacher",
+    "TV Channel",
+    "TV Network",
+    "TV Show",
+    "Udon Restaurant",
+    "Ukranian Restaurant",
+    "Unagi Restaurant",
+    "Uniform Supplier",
+    "Urban Farm",
+    "Vacation Home Rental",
+    "Veterinarian",
+    "Video Creator",
+    "Video Game",
+    "Visual Arts",
+    "Web Designer",
+    "Website",
+    "Wedding Planning Service",
+    "Winery/Vineyard",
+    "Women’s Clothing Store",
+    "Women’s Health Clinic",
+    "Writer",
+    "Xinjiang Restaurant",
+    "Yakiniku Restaurant",
+    "Yakitori Restaurant",
+    "Yoga Studio",
+    "Yoshoku Restaurant",
+    "Youth Organization",
+    "Zhejiang Restaurant",
+    "Zoo"
 ]
 
 export default function Home() {
 
-    const [selected, setSelected] = useState<any>(people[0])
+    const [selected, setSelected] = useState<any>('')
     const [query, setQuery] = useState<string>('')
 
     const filteredPeople =
         query === ''
             ? people
             : people.filter((person) =>
-                person.name
+                person
                     .toLowerCase()
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
@@ -55,12 +240,13 @@ export default function Home() {
                         <Combobox value={selected} onChange={setSelected}>
                             <div className="">
                                 <div className="relative w-full">
+                                <Combobox.Button>
                                     <Combobox.Input
+                                    placeholder="Search for your brands category"
                                         className="w-[681px] h-[44px]  rounded-full placeholder:text-[#939393] border-[3px] border-[#D0D9F1] px-5 py-[10px] bg-white"
-                                        displayValue={(person:any) => person.name}
+                                        displayValue={(person:any) => person}
                                         onChange={(event) => setQuery(event.target.value)}
                                     />
-                                    <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
                                     </Combobox.Button>
                                 </div>
                                 <Transition
@@ -70,7 +256,7 @@ export default function Home() {
                                     leaveTo="opacity-0"
                                     afterLeave={() => setQuery('')}
                                 >
-                                    <Combobox.Options className="z-[100] absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                                    <Combobox.Options className="z-[100] p-1 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
                                         {filteredPeople.length === 0 && query !== '' ? (
                                             <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
                                                 Nothing found.
@@ -78,9 +264,9 @@ export default function Home() {
                                         ) : (
                                             filteredPeople.map((person) => (
                                                 <Combobox.Option
-                                                    key={person.id}
+                                                    key={person}
                                                     className={({ active }) =>
-                                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-teal-600 text-white' : 'text-gray-900'
+                                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-teal-600 text-white rounded' : 'text-gray-900'
                                                         }`
                                                     }
                                                     value={person}
@@ -91,7 +277,7 @@ export default function Home() {
                                                                 className={`block truncate ${selected ? 'font-medium' : 'font-normal'
                                                                     }`}
                                                             >
-                                                                {person.name}
+                                                                {person}
                                                             </span>
                                                             {selected ? (
                                                                 <span
