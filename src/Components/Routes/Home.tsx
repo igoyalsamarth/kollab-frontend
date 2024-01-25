@@ -295,7 +295,7 @@ export default function Home() {
                                 </Transition>
                             </div>
                         </Combobox>
-                    <Link to={`/search/${selected}`} className='absolute top-[8px] right-[12px]'>
+                    <Link to={`/search/${selected.toLowerCase()}`} className='absolute top-[8px] right-[12px]'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.739 2.125C17.109 2.125 21.477 6.493 21.477 11.863C21.477 14.3965 20.5047 16.7073 18.9136 18.4415L22.0444 21.5657C22.3374 21.8587 22.3384 22.3327 22.0454 22.6257C21.8994 22.7737 21.7064 22.8467 21.5144 22.8467C21.3234 22.8467 21.1314 22.7737 20.9844 22.6277L17.8159 19.468C16.1491 20.8028 14.0357 21.602 11.739 21.602C6.369 21.602 2 17.233 2 11.863C2 6.493 6.369 2.125 11.739 2.125ZM11.739 3.625C7.196 3.625 3.5 7.32 3.5 11.863C3.5 16.406 7.196 20.102 11.739 20.102C16.281 20.102 19.977 16.406 19.977 11.863C19.977 7.32 16.281 3.625 11.739 3.625Z" fill="url(#paint0_radial_160_2228)" />
                             <defs>
