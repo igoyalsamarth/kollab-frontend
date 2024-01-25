@@ -7,10 +7,10 @@ const [profileModal, setProfileModal] = useState(false)
 
 return (
     <>
-    <button onClick={() => setProfileModal(true)} className="flex flex-col items-center -space-y-[5px] w-full">
-      <div className={`z-[50] flex aspect-square w-[104px] border-[5px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2] bg-cover`} style={{backgroundImage: `url(${getBase64Image(props.imgSource)})`}}>
-      </div>
-      <div className="z-[49] w-full gap-4 flex flex-col border-[5px] overflow-clip border-white rounded-[10px] shadow-[0px_4px_34px_0px_#D6DFF2] p-5 items-center bg-gradient-to-b from-[#F2F6FE] to-[#f2f6fe00]">
+    <div className="flex flex-col items-center -space-y-[5px] w-full">
+      <button onClick={() => setProfileModal(true)} className={`z-[50] flex aspect-square w-[104px] border-[5px] border-white rounded-full shadow-[0px_4px_34px_0px_#D6DFF2] bg-cover`} style={{backgroundImage: `url(${getBase64Image(props.imgSource)})`}}>
+      </button>
+      <button onClick={() => setProfileModal(true)} className="z-[49] w-full gap-4 flex flex-col border-[5px] overflow-clip border-white rounded-[10px] shadow-[0px_4px_34px_0px_#D6DFF2] p-5 items-center bg-gradient-to-b from-[#F2F6FE] to-[#f2f6fe00]">
         <div className="flex flex-col items-center">
           <p className="text-lg text-center line-clamp-1">{props.accountName}</p>
           <p className="text-sm">@{props.instaAccount}</p>
@@ -36,11 +36,11 @@ return (
           </div>
           <p className="text-[#767676] text-sm">Engagment rate</p>
         </div>
-        <button onClick={() => setProfileModal(true)} className="px-5 py-[10px] border border-[#D0D9F1] rounded-[10px] font-moderno">
+        <div className="px-5 py-[10px] border border-[#D0D9F1] rounded-[10px] font-moderno">
           View Details
-        </button>
-      </div>
-    </button>
+        </div>
+      </button>
+    </div>
     {
       profileModal && <ProfileModal setProfileModal={setProfileModal} instaAccount={props.instaAccount} />
     }
