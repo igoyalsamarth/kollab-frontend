@@ -42,7 +42,7 @@ export default function ProfileModal(props: any) {
                                 {basicDetails?.user.description}
                             </div>
                         </div>
-                        {basicDetails && <div className="flex w-[179px] aspect-square border-[5px] border-white rounded-full shadow-[0px_6.885px_58.519px_0px_#D6DFF2] bg-cover" style={{ backgroundImage: `url(${getBase64Image(basicDetails.user.imgSource)})` }}>
+                        {basicDetails && <div className="flex h-[179px] aspect-square border-[5px] border-white rounded-full shadow-[0px_6.885px_58.519px_0px_#D6DFF2] bg-cover" style={{ backgroundImage: `url(${getBase64Image(basicDetails.user.imgSource)})` }}>
                         </div>}
                     </div>
                     <div className="flex gap-[50px] px-[20px]">
@@ -75,7 +75,7 @@ export default function ProfileModal(props: any) {
                                         <rect x="5.04993" y="1.797" width="10.2257" height="1.6875" transform="rotate(45 5.04993 1.797)" fill="white" />
                                         <rect x="14.0929" y="0.712646" width="11.7563" height="1.6875" transform="rotate(45 14.0929 0.712646)" fill="white" />
                                     </svg>
-                                    <p className={`text-2xl leading-none ${reelsPosts ? 'text-black' : 'text-[#868689]'}`}>{basicDetails?.numberOfReels} Reels</p>
+                                    <p className={`text-2xl leading-none ${reelsPosts ? 'text-black' : 'text-[#868689]'}`}>Latest Reels</p>
                                 </div>
                             </button>
                             <button onClick={() => setReelsPosts(false)} className="flex flex-col gap-2">
@@ -86,7 +86,7 @@ export default function ProfileModal(props: any) {
                                         <path d="M6.76234 8.71267C7.77031 8.71267 8.58743 7.89555 8.58743 6.88758C8.58743 5.87962 7.77031 5.0625 6.76234 5.0625C5.75437 5.0625 4.93726 5.87962 4.93726 6.88758C4.93726 7.89555 5.75437 8.71267 6.76234 8.71267Z" stroke="#868689" stroke-width="1.82508" stroke-miterlimit="10" />
                                         <path d="M19.5379 20.1216L14.3672 14.9606C14.0382 14.6316 13.596 14.4407 13.1309 14.4269C12.6659 14.4132 12.2131 14.5775 11.8652 14.8864L2.95312 22.3594M14.9752 25.6088L22.0098 18.5742C22.3315 18.2519 22.7621 18.0614 23.217 18.0403C23.672 18.0192 25.8061 19.1151 26.1562 19.4062" stroke="#868689" stroke-width="1.82508" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                    <p className={`text-2xl leading-none ${!reelsPosts ? 'text-black' : 'text-[#868689]'}`}>{basicDetails?.numberOfStaticPosts} Static Posts</p>
+                                    <p className={`text-2xl leading-none ${!reelsPosts ? 'text-black' : 'text-[#868689]'}`}>Latest Static Posts</p>
                                 </div>
                             </button>
                         </div>
