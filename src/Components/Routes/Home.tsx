@@ -11,7 +11,8 @@ const people = [
     "Digital Creator",
     "Health/Beauty",
     "Artist",
-    "Dermatologist"
+    "Dermatologist",
+    "Doctor"
 ]
 
 export default function Home() {
