@@ -12,7 +12,11 @@ const people = [
     "Health/Beauty",
     "Artist",
     "Dermatologist",
-    "Doctor"
+    "Doctor",
+    "Makeup Artist",
+    "Fashion Model",
+    "Video Creator",
+    "Personal Blog"
 ]
 
 export default function Home() {
